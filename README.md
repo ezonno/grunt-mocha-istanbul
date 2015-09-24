@@ -172,6 +172,10 @@ Spits out the command line that would be called, just to make sure everything is
 
 Setting this exclude files from coverage report, check `istanbul help cover`. You may use glob matching in here.
 
+##### _Array_ `options.includes` (default: `false`)
+
+Setting this includes files in the coverage report, check `istanbul help cover`. You may use glob matching in here.
+
 ##### _String_ `options.mask` (default: `false`)
 
 The mask for the tests to be ran. By default, mocha will execute the `test` folder and all test files. Will override any files specified in `src` and instead use the mask on those files' folders.
