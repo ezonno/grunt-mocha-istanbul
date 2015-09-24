@@ -146,6 +146,7 @@ module.exports = function (grunt){
           branches  : false
         },
         excludes       : false,
+        includes       : false,
         mochaOptions   : false,
         istanbulOptions: false
       }),
@@ -175,6 +176,13 @@ module.exports = function (grunt){
       options.excludes.forEach(function(excluded){
         args.push('-x');
         args.push(excluded);
+      });
+    }
+
+    if (options.includes && options.includes.length) {
+      options.includes.forEach(function(included){
+        args.push('-i');
+        args.push(included);
       });
     }
 
